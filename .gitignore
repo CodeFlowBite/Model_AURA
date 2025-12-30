@@ -6,3 +6,6 @@ __pycache__/
 # Entornos
 venv/
 .env/
+
+# Visual studio code
+.vscode/
