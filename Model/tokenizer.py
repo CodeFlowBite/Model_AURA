@@ -18,14 +18,14 @@ class ChatTokenizer:
                            - Control: <PAD>, <UNK>, <USER>, <EOS>
                            - Intención: <INTENT>
                            - Bot: <BOT>
-                           - Variables: <VAR_001> hasta <VAR_999>, <VAR_RES>
-
+                           - Variables: <VAR_001> hasta <VAR_999>
+                           - Variables: <RES_001> hasta <RES_200>
         """
         if special_tokens is None:
             # Tokens base del sistema
             self.special_tokens = [
-                '<PAD>', '<UNK>', '<USER>', '<EOS>',
-                '<INTENT>', '<STATE>', '</STATE>', '<TAG>', '</TAG>', '<HALT_GENERATION/>', '<BOT>', '<ACTION>', '</ACTION>'
+                '<PAD>', '<UNK>', '<USER>', '<EOS>', '<HALT_GENERATION/>',
+                '<INTENT>', '<STATE>', '</STATE>', '<TAG>', '</TAG>', '<BOT>', '<ACTION>', '</ACTION>'
             ]
             # Agregar tokens de variables (VAR_001 hasta VAR_999)
             for i in range(1, 1000):
